@@ -1,4 +1,4 @@
-# Slanger-benchmark
+# pbenchmark
 
   A simple tool to benchmark Pusher.com compatible servers.
   
@@ -9,13 +9,13 @@
 
 ## Getting started
 
-Install required gems with bundler:
+Install the pbenchmark gem:
 
-    bundle install
+    gem install pbenchmark
 
-Run it against your server, for example a slanger daemon:
+Run it against your server, for example a Slanger daemon:
 
-    ruby slanger-benchmark.rb -c 10 -n 5 -i 43 -k bcff8137f9c04db491199d4578a37286 -s 68f5400d1aaa4d1bbaaf70bb0b866cb7 -a 127.0.0.1:80 -w 127.0.0.1:8080
+    pbenchmark -c 10 -n 5 -i 43 -k bcff8137f9c04db491199d4578a37286 -s 68f5400d1aaa4d1bbaaf70bb0b866cb7 -a 127.0.0.1:80 -w 127.0.0.1:8080
 
 Messages are sent via the API, and the time it took them to reach the websocket clients is printed.
 
