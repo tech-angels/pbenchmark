@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform                    = Gem::Platform::RUBY
   s.name                        = 'pbenchmark'
-  s.version                     = '0.0.1'
+  s.version                     = '1.0.0'
   s.summary                     = 'A benchmarking tool for servers compatible with the Pusher protocol.'
   s.description                 = 'A benchmarking tool for servers compatible with the Pusher protocol.'
   s.homepage			= 'https://github.com/tech-angels/pbenchmark'
