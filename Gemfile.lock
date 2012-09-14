@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jagan-benchmark (0.0.1)
+    pbenchmark (0.0.1)
       activesupport (~> 3.2.3)
       em-http-request (~> 1.0.3)
       em-websocket-client (~> 0.1.1)
@@ -44,5 +44,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jagan-benchmark!
+  pbenchmark!
   pusher (~> 0.8.2)
