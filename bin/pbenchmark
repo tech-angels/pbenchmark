@@ -114,9 +114,9 @@ module PBenchmark
     latencies  = []
     client_who_received = 0
     messages_to_send = @options[:nb_messages].to_i
-    puts "Pusher host:port : " + Pusher.host.to_s + ":" + Pusher.port.to_s
-    puts "Pusher id/key/secret:" + Pusher.app_id.to_s + " " + Pusher.key.to_s + " " + Pusher.secret.to_s
-
+    puts "Latency (ms)"
+    puts "min\tmean\tmedian\tmax"
+ 
     EM.run do
       # Connect clients
       (1..@options[:nb_clients]).each do
@@ -136,14 +136,11 @@ module PBenchmark
             latency = now - data['time']
             latencies << latency
             client_who_received += 1
-            #puts "Latency: " + (latency * 1000.0).to_s + " ms."
           end
           if client_who_received >= @options[:nb_clients] then
             # Display statistics
             stats = get_stats(latencies)
-            puts "Latency (ms)"
-            puts "min mean median max"
-            puts "#{stats[:min]} #{stats[:mean]} #{stats[:median]} #{stats[:max]}" 
+            puts "%.2f\t%.2f\t%.2f\t%.2f" % [stats[:min], stats[:mean], stats[:median], stats[:max]] 
             @all_latencies += latencies
           end
         end
@@ -177,9 +174,9 @@ end
 
 # Print final stats
 stats = PBenchmark.get_stats(PBenchmark.get_latencies)
-puts "Overall latencies (ms)"
-puts "min mean median max"
-puts "#{stats[:min]} #{stats[:mean]} #{stats[:median]} #{stats[:max]}" 
+puts "\n\nOverall latencies (ms)"
+puts "min\tmean\tmedian\tmax"
+puts "%.2f\t%.2f\t%.2f\t%.2f" % [stats[:min], stats[:mean], stats[:median], stats[:max]] 
  
 
 
