@@ -1,12 +1,29 @@
 #!/usr/bin/env ruby
 
-require 'bundler/setup'
+#    Copyright (c)2012 Tech-Angels
+# 
+#    This file is part of PBenchmark.
+#
+#    PBenchmark is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    PBenchmark is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with PBenchmark.  If not, see <http://www.gnu.org/licenses/>. 2
 
+
+
+require 'bundler'
 require 'active_support/json'
 require 'eventmachine'
 require 'em-websocket-client'
 require 'pusher'
-#require 'benchmark'
 require 'optparse'
 
 module PBenchmark
