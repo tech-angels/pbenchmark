@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'bundler/setup'
 
 require 'active_support/json'
@@ -7,7 +9,7 @@ require 'pusher'
 #require 'benchmark'
 require 'optparse'
 
-module SlangerBenchmark
+module PBenchmark
   @all_latencies = []
   def get_latencies
     @all_latencies
@@ -152,12 +154,12 @@ module SlangerBenchmark
 end
 
 begin
-  SlangerBenchmark.regular_channel
+  PBenchmark.regular_channel
 rescue SystemExit, Interrupt
 end
 
 # Print final stats
-stats = SlangerBenchmark.get_stats(SlangerBenchmark.get_latencies)
+stats = PBenchmark.get_stats(PBenchmark.get_latencies)
 puts "Overall latencies (ms)"
 puts "min mean median max"
 puts "#{stats[:min]} #{stats[:mean]} #{stats[:median]} #{stats[:max]}" 
