@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.add_dependency                'eventmachine',     '~> 1.0.0'
   s.add_dependency                'em-http-request' ,  '~> 1.0.3'
   s.add_dependency                'em-websocket-client', '~>0.1.1'
-  s.add_development_dependency    'pusher',           '~> 0.8.2'
+  s.add_dependency                'pusher',           '~> 0.8.2'
 
   s.files                       = Dir['README.md', 'pbenchmark.rb']
   s.require_path                = '.'
