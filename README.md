@@ -1,11 +1,8 @@
 # pbenchmark
 
-  A simple tool to benchmark Pusher.com compatible servers.
+A simple tool to benchmark Pusher.com compatible servers.
   
-  [![Dependency Status][2]][1]
-  
-  [1]: https://gemnasium.com/tech-angels/pb
-  [2]: https://gemnasium.com/tech-angels/pb.png
+[![Dependency Status](https://gemnasium.com/tech-angels/pbenchmark.png)](https://gemnasium.com/tech-angels/pbenchmark)
 
 ## Getting started
 
